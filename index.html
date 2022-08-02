@@ -57,7 +57,17 @@
         <section class="order section">
             <div class="container">
                 <h1 class="order-title">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="primary-button">Замовити послугу</button>
+                <button type="button" class="primary-button" data-modal-open>Замовити послугу</button>
+            </div>
+            
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button type="button" class="modal-btn" data-modal-close>
+                        <svg width="11" height="11">
+                            <use href="./images/icons/icons.svg#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
 
