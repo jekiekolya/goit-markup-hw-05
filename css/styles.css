@@ -1,11 +1,21 @@
+
+/* TEXT COLOR */
 /* main color for text: #757575; */
 /* main color for text in header: #212121; */
 /* secondary color for text: #FFFFFF; */
 /* color accent: #2196F3 */
+/* Color for logo: #000000 */
 
+
+/* BACKGROUND COLOR */
 /* main background color: #FFFFFF; */
 /* secondary background color: #2F303A */
 /* another background color: #F5F4FA */
+
+
+/* ELEMENTS COLOR */
+/* Color for icons: #AFB1B8 */
+
 
 /* common selectors */
 :root {
@@ -15,6 +25,8 @@
     --primary-white-color: #FFFFFF;
     --secondary-white-color: #F5F4FA;
     --secondary-background-color: #2F303A;
+    --primary-icon-color: #AFB1B8;
+
 
     --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -296,7 +308,7 @@ nav .link:focus::after {
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.3);
 }
 
 .modal {
@@ -312,6 +324,7 @@ nav .link:focus::after {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+
 
 
 .modal-btn {
@@ -427,7 +440,7 @@ nav .link:focus::after {
     width: 270px;
     text-align: center;
 
-    background: #FFFFFF;
+    background: var(--primary-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -472,7 +485,7 @@ nav .link:focus::after {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    color: #AFB1B8;
+    color: var(--primary-icon-color);
 
     transition: background-color 250ms var(--time-function),
     color 250ms var(--time-function);
@@ -506,8 +519,8 @@ nav .link:focus::after {
     align-items: center;
     width: 170px;
     height: 92px;
-    color: #AFB1B8;
-    border: 1px solid #AFB1B8;
+    color: var(--primary-icon-color);
+    border: 1px solid var(--primary-icon-color);
     border-radius: 4px;
 
     transition: color 250ms var(--time-function),
@@ -615,7 +628,8 @@ address .contact {
     text-align: center;
 
     transition: background-color 250ms var(--time-function),
-    box-shadow 250ms var(--time-function);
+    box-shadow 250ms var(--time-function), 
+    color 250ms var(--time-function);
 }
 
 .secondary-button:hover,
@@ -643,6 +657,8 @@ address .contact {
 
     background: var(--primary-white-color);
     border: 1px solid #EEEEEE;
+
+    transition: box-shadow 250ms var(--time-function);
 }
 
 .card-item:hover,
@@ -651,14 +667,14 @@ address .contact {
 }
 
 
-.card-img{
-    display: block;
-    margin: -1px 0 0 -1px;
-}
-
 .card-icon {
     position: relative;
     overflow: hidden;
+}
+
+.card-img {
+    display: block;
+    margin: -1px 0 0 -1px;
 }
 
 .card-overlay {
